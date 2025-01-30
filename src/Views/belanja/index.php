@@ -3,9 +3,10 @@
 <h1>Daftar Belanja</h1>
 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTambah">Tambah Item</button>
 
-<table class="table">
+<table class="table table-bordered">
     <thead>
         <tr>
+            <th>ID</th>
             <th>Nama</th>
             <th>Harga</th>
             <th>Aksi</th>
@@ -14,6 +15,7 @@
     <tbody>
         <?php foreach ($items as $item): ?>
             <tr>
+                <td><?= $item['id'] ?></td>
                 <td><?= $item['nama'] ?></td>
                 <td><?= $item['harga'] ?></td>
                 <td>
