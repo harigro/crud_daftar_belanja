@@ -20,12 +20,14 @@ class BelanjaController {
     public function store() {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $this->belanja->create($_POST['nama'], $_POST['harga']);
-            header("Location: /");
+            header("Location: index.php");
+            exit;
         }
     }
 
     public function delete($id) {
         $this->belanja->delete($id);
-        header("Location: /");
+        header("Location: index.php");
+        exit;
     }
 }

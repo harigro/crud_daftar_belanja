@@ -1,7 +1,7 @@
 <?php $this->layout('layout') ?>
 
 <h1>Daftar Belanja</h1>
-<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTambah">Tambah Item</button>
+<button class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#modalTambah">Tambah Item</button>
 
 <table class="table table-bordered">
     <thead>
@@ -19,7 +19,7 @@
                 <td><?= $item['nama'] ?></td>
                 <td><?= $item['harga'] ?></td>
                 <td>
-                    <form method="POST" action="/delete.php">
+                    <form method="POST" action="./delete.php">
                         <input type="hidden" name="id" value="<?= $item['id'] ?>">
                         <button type="submit" class="btn btn-danger">Hapus</button>
                     </form>
@@ -38,7 +38,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <form method="POST" action="/store.php">
+                <form method="POST" action="./store.php">
                     <div class="mb-3">
                         <label class="form-label">Nama</label>
                         <input type="text" name="nama" class="form-control" required>
